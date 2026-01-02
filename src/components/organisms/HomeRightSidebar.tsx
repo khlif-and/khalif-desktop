@@ -1,3 +1,4 @@
+import { COLORS } from '../../constants/colors';
 import { MediaList, MediaItem } from '../molecules/MediaList';
 
 export const HomeRightSidebar: React.FC = () => {
@@ -16,7 +17,10 @@ export const HomeRightSidebar: React.FC = () => {
     return (
         <div className="space-y-8 hidden xl:block">
             {/* AI Assistant Card */}
-            <div className="bg-[#1A1F2B] rounded-3xl p-6 relative overflow-hidden">
+            <div
+                className="rounded-3xl p-6 relative overflow-hidden"
+                style={{ backgroundColor: COLORS.background.secondary }}
+            >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl -mr-10 -mt-10"></div>
                 <h3 className="text-xl font-bold mb-2">Tanya Khalif AI</h3>
                 <p className="text-sm text-gray-400 mb-6">Bingung hukum fiqih atau butuh doa khusus? Tanyakan sekarang.</p>

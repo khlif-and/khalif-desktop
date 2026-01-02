@@ -1,8 +1,13 @@
 import React from 'react';
 
+import { COLORS } from '../../constants/colors';
+
 export const AudioPlayerBar: React.FC = () => {
     return (
-        <div className="h-20 bg-[#0D111D] border-t border-white/5 flex items-center justify-between px-4 md:px-6 z-30 gap-4">
+        <div
+            className="h-20 border-t border-white/5 flex items-center justify-between px-4 md:px-6 z-30 gap-4"
+            style={{ backgroundColor: COLORS.background.player }}
+        >
             {/* Song Info - Flexible width but constrained */}
             <div className="flex items-center gap-3 w-full md:w-1/4 min-w-0">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gray-800 flex-shrink-0"></div>

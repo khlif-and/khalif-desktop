@@ -4,7 +4,7 @@ export const PlaylistHero: React.FC = () => {
     return (
         <section className="relative flex flex-col md:flex-row items-end gap-6 p-6 md:p-10 pb-6 mb-6 overflow-hidden">
             {/* Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-red-900/50 to-[#0D111D] z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-red-900/50 to-[#000000] z-0"></div>
 
             {/* Cover Image */}
             <div className="relative z-10 w-48 h-48 md:w-56 md:h-56 shadow-2xl rounded-xl overflow-hidden">

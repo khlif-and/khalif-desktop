@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
+
+import { COLORS } from '../../constants/colors';
 
 interface HomeHeaderProps {
     onMenuClick: () => void;
 }
 
-export const HomeHeader: React.FC<HomeHeaderProps> = ({ onMenuClick }) => {
+export const HomeHeader = forwardRef<HTMLElement, HomeHeaderProps>(({ onMenuClick }, ref) => {
     return (
-        <header className="h-20 flex items-center justify-between px-4 lg:px-8 border-b border-white/5 bg-[#0D111D]/50 backdrop-blur-sm z-20 gap-4 sticky top-0">
+        <header
+            ref={ref}
+            className="h-20 flex items-center justify-between px-4 lg:px-8 z-30 gap-4 absolute top-0 left-0 w-full transition-all duration-300 border-b border-transparent"
+            style={{
+                backgroundColor: 'transparent',
+                borderColor: 'transparent'
+            }}
+        >
             {/* Hamburger Button & Search */}
             <div className="flex items-center gap-4 flex-1">
                 <button
@@ -22,7 +31,8 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ onMenuClick }) => {
                     <input
                         type="text"
                         placeholder="Cari surah, ustadz, atau kajian..."
-                        className="w-full bg-[#1A1F2B] text-gray-300 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500/50"
+                        className="w-full text-gray-300 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500/50"
+                        style={{ backgroundColor: COLORS.background.secondary }}
                     />
                     <span className="absolute left-3 top-2.5 text-gray-500">🔍</span>
                 </div>
@@ -37,4 +47,6 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ onMenuClick }) => {
             </div>
         </header>
     );
-};
+});
+
+HomeHeader.displayName = 'HomeHeader';

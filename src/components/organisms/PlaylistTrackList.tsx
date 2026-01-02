@@ -1,4 +1,4 @@
-import React from 'react';
+import { COLORS } from '../../constants/colors';
 
 interface Track {
     id: number;
@@ -22,7 +22,10 @@ export const PlaylistTrackList: React.FC = () => {
     return (
         <div className="min-w-0">
             {/* Sticky Header */}
-            <div className="grid grid-cols-12 gap-4 px-6 md:px-10 py-2 border-b border-white/10 text-xs font-semibold uppercase text-gray-400 sticky top-0 bg-[#0D111D] z-10">
+            <div
+                className="grid grid-cols-12 gap-4 px-6 md:px-10 py-2 border-b border-white/10 text-xs font-semibold uppercase text-gray-400 sticky top-0 z-10"
+                style={{ backgroundColor: COLORS.background.primary }}
+            >
                 <div className="col-span-1 text-center">#</div>
                 <div className="col-span-5 md:col-span-4">Title</div>
                 <div className="col-span-3 hidden md:block">Album</div>

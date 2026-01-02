@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { COLORS } from '../../constants/colors';
+
 interface HomeSidebarProps {
     isOpen: boolean;
     onClose: () => void;
@@ -7,10 +9,13 @@ interface HomeSidebarProps {
 
 export const HomeSidebar: React.FC<HomeSidebarProps> = ({ isOpen, onClose }) => {
     return (
-        <aside className={`
-            fixed lg:relative z-50 w-64 h-full bg-[#0D111D] flex flex-col p-6 border-r border-white/5 transition-transform duration-300 ease-in-out
-            ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        `}>
+        <aside
+            className={`
+                fixed lg:relative z-50 w-64 h-full flex flex-col p-6 border-r border-white/5 transition-transform duration-300 ease-in-out
+                ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+            `}
+            style={{ backgroundColor: COLORS.background.sidebar }}
+        >
             <div className="mb-10 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold font-sans text-white">K</div>
