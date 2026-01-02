@@ -1,0 +1,105 @@
+
+import React from 'react';
+import desertDuneBg from '../assets/desert-dune-bg.png';
+
+interface RegisterScreenProps {
+    onNavigateToLogin: () => void;
+}
+
+export const RegisterScreen: React.FC<RegisterScreenProps> = ({ onNavigateToLogin }) => {
+    return (
+        <div className="flex w-full h-full bg-[#0D111D] text-white font-sans overflow-hidden fixed inset-0 z-30">
+            {/* Left Side: Background Image */}
+            <div className="hidden md:flex w-5/12 relative flex-col justify-end p-12">
+                <img src={desertDuneBg} alt="Desert Background" className="absolute inset-0 w-full h-full object-cover z-0" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+
+                {/* Top Content (Logo/Back) */}
+                <div className="absolute top-8 left-8 z-20">
+                    <h2 className="text-3xl font-bold tracking-widest text-white/90">HSO</h2>
+                </div>
+
+                <div className="absolute top-8 right-8 z-20">
+                    <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2">
+                        Back to website <span>→</span>
+                    </button>
+                </div>
+
+                {/* Bottom Content */}
+                <div className="relative z-20 mb-10">
+                    <h3 className="text-3xl font-bold leading-tight mb-2">Capturing Moments,<br />Creating Memories</h3>
+
+                    {/* Carousel Indicators */}
+                    <div className="flex gap-2 mt-6">
+                        <div className="w-8 h-1 bg-white rounded-full"></div>
+                        <div className="w-8 h-1 bg-white/30 rounded-full"></div>
+                        <div className="w-8 h-1 bg-white/30 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Right Side: Form Content */}
+            <div className="w-full md:w-7/12 flex flex-col justify-center px-8 md:px-24 relative bg-[#0D111D]">
+                <div className="max-w-md w-full mx-auto">
+                    <div className="mb-8">
+                        <h2 className="text-3xl font-bold mb-2">Create an Account</h2>
+                        <p className="text-gray-400 text-sm">Already have an account? <button onClick={onNavigateToLogin} className="text-white hover:underline cursor-pointer">Login</button></p>
+                    </div>
+
+                    <form className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="flex flex-col gap-1">
+                                <input type="text" placeholder="First name" className="bg-[#1A1F2E] border border-transparent focus:border-indigo-500 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <input type="text" placeholder="Last name" className="bg-[#1A1F2E] border border-transparent focus:border-indigo-500 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <input type="email" placeholder="Email" className="w-full bg-[#1A1F2E] border border-transparent focus:border-indigo-500 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+                        </div>
+
+                        <div>
+                            <input type="password" placeholder="Enter your password" className="w-full bg-[#1A1F2E] border border-transparent focus:border-indigo-500 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-colors" />
+                        </div>
+
+                        <div className="flex items-center gap-2 mt-4">
+                            <input type="checkbox" id="terms" className="w-4 h-4 rounded bg-[#1A1F2E] border-gray-600 text-indigo-600 focus:ring-indigo-500" />
+                            <label htmlFor="terms" className="text-sm text-gray-400">I agree to the <a href="#" className="text-indigo-400 hover:text-indigo-300">Terms & Conditions</a></label>
+                        </div>
+
+                        <button type="button" className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold py-3 rounded-lg mt-6 shadow-lg shadow-purple-900/20 transition-all transform active:scale-[0.99]">
+                            Create Account
+                        </button>
+                    </form>
+
+                    <div className="relative my-8 text-center">
+                        <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-gray-700"></div></div>
+                        <span className="relative bg-[#0D111D] px-2 text-xs text-gray-500 uppercase">Or register with</span>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                        <button className="flex items-center justify-center gap-2 border border-gray-700 hover:bg-[#1A1F2E] rounded-lg py-2.5 transition-colors group">
+                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.766 12.2764C23.766 11.4607 23.6999 10.6406 23.5588 9.83807H12.24V14.4591H18.7217C18.4528 15.9494 17.5885 17.2678 16.323 18.1056V21.1039H20.19C22.4608 19.0139 23.766 15.9274 23.766 12.2764Z" fill="#4285F4" />
+                                <path d="M12.2401 24.0008C15.4766 24.0008 18.2059 22.9382 20.1945 21.1039L16.3275 18.1055C15.2517 18.8375 13.8627 19.252 12.2445 19.252C9.11388 19.252 6.45946 17.1399 5.50705 14.3003H1.5166V17.3912C3.55371 21.4434 7.7029 24.0008 12.2401 24.0008Z" fill="#34A853" />
+                                <path d="M5.50253 14.3003C5.00236 12.8099 5.00236 11.1961 5.50253 9.70575V6.61481H1.51649C-0.18551 10.0056 -0.18551 14.0004 1.51649 17.3912L5.50253 14.3003Z" fill="#FBBC05" />
+                                <path d="M12.2401 4.74966C13.9509 4.7232 15.6044 5.36697 16.8434 6.54867L20.2695 3.12262C18.1001 1.0855 15.2208 -0.034466 12.2401 0.000808666C7.7029 0.000808666 3.55371 2.55822 1.5166 6.61039L5.50264 9.70134C6.45064 6.86173 9.10947 4.74966 12.2401 4.74966Z" fill="#EA4335" />
+                            </svg>
+                            <span className="text-sm font-medium">Google</span>
+                        </button>
+                        <button className="flex items-center justify-center gap-2 border border-gray-700 hover:bg-[#1A1F2E] rounded-lg py-2.5 transition-colors group">
+                            <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1388 0.499695C12.3996 0.288219 12.756 0.198946 13.0886 0.262828C14.7358 0.63581 16.2081 1.34685 17.5126 2.37943C17.5255 2.38883 17.5348 2.40118 17.5398 2.41505C17.5448 2.42892 17.5452 2.44372 17.5409 2.45772C17.5218 2.51888 17.5103 2.58309 17.5065 2.64821C17.476 3.16851 17.4877 4.19794 17.4877 4.19794L18.4239 4.13627C18.675 4.11973 18.9175 4.02055 19.1228 3.85045C19.9873 3.13426 21.011 2.6074 22.1284 2.29819C22.6102 2.16484 23.1165 2.27852 23.4475 2.63665C23.7785 2.99479 23.8344 3.53509 23.5934 3.96101C22.8465 5.28131 22.3023 6.70321 21.9863 8.16912C21.8219 8.93175 21.7828 9.71536 21.8697 10.4851C21.9056 10.8037 22.0945 11.0827 22.3791 11.2372L23.2359 11.7025C23.6934 11.9511 23.8647 12.5253 23.6161 12.9829L22.6161 14.8229C22.3676 15.2804 21.7934 15.4517 21.3359 15.2032L20.4791 14.7379C20.1945 14.5834 19.8517 14.5834 19.5671 14.7379L18.7103 15.2032C18.2528 15.4517 17.6786 15.2804 17.4301 14.8229L16.4301 12.9829C16.1815 12.5253 16.3528 11.9511 16.8103 11.7025L17.6671 11.2372C17.9517 11.0827 18.1406 10.8037 18.1765 10.4851C18.2634 9.71536 18.2243 8.93175 18.0599 8.16912C17.8641 7.26084 17.5132 6.38153 17.0253 5.57143L16.0891 5.6331C15.838 5.64964 15.5955 5.74882 15.3902 5.91892C14.5257 6.63511 13.502 7.16197 12.3846 7.47118C11.9028 7.60453 11.3965 7.49085 11.0655 7.13272C10.7345 6.77458 10.6786 6.23428 10.9196 5.80836C11.6665 4.48806 12.2107 3.06616 12.5267 1.60025C12.6358 1.09432 12.4497 0.573516 12.0006 0.283151" />
+                                <path d="M7.49258 18.1517C7.49258 18.1517 11.2066 18.1517 12.4566 18.1517C12.8708 18.1517 13.2066 17.8159 13.2066 17.4017C13.2066 16.9875 12.8708 16.6517 12.4566 16.6517C11.2066 16.6517 7.49258 16.6517 7.49258 16.6517C6.66415 16.6517 5.99258 15.9801 5.99258 15.1517V8.90168C5.99258 8.48747 5.65679 8.15168 5.24258 8.15168C4.82837 8.15168 4.49258 8.48747 4.49258 8.90168V15.1517C4.49258 16.8085 5.83573 18.1517 7.49258 18.1517Z" fill="white" />
+                            </svg>
+                            <span className="text-sm font-medium">Apple</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
