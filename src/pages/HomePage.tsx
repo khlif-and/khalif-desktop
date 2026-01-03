@@ -1,9 +1,9 @@
 import React from 'react';
 import { DashboardLayout } from '../components/templates/DashboardLayout';
-import { HomeRightSidebar } from '../components/organisms/HomeRightSidebar';
-import { HomeHero } from '../components/organisms/HomeHero';
+import { HomeRightSidebar } from '../components/organisms/home/HomeRightSidebar';
+import { HomeHero } from '../components/organisms/home/HomeHero';
 import { RecommendationList } from '../components/molecules/RecommendationList';
-import { ContentList } from '../components/organisms/ContentList';
+import { ContentList } from '../components/organisms/home/ContentList';
 
 export const HomePage: React.FC = () => {
     return (

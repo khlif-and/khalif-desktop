@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { OnboardingScreen } from '../components/organisms/OnboardingScreen';
+import { OnboardingScreen } from '../components/organisms/onboarding/OnboardingScreen';
 import { PATHS } from '../routes/paths';
 
 export const OnboardingPage: React.FC = () => {

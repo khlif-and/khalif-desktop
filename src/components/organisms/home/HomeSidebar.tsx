@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { COLORS } from '../../constants/colors';
+import { COLORS } from '../../../constants/colors';
 
 interface HomeSidebarProps {
     isOpen: boolean;
@@ -34,8 +35,10 @@ export const HomeSidebar: React.FC<HomeSidebarProps> = ({ isOpen, onClose }) => 
                 <div>
                     <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Menu</h3>
                     <ul className="space-y-2">
-                        <li><a href="#" className="flex items-center gap-3 text-blue-500 bg-blue-500/10 px-4 py-2 rounded-lg font-medium"><span className="text-lg">🏠</span> Beranda</a></li>
-                        <li><a href="#" className="flex items-center gap-3 text-gray-400 hover:text-white px-4 py-2 rounded-lg transition-colors"><span className="text-lg">📖</span> Al-Qur'an</a></li>
+                        <li><Link to="/" className="flex items-center gap-3 text-blue-500 bg-blue-500/10 px-4 py-2 rounded-lg font-medium"><span className="text-lg">🏠</span> Beranda</Link></li>
+
+
+                        <li><Link to="/alquran" className="flex items-center gap-3 text-gray-400 hover:text-white px-4 py-2 rounded-lg transition-colors"><span className="text-lg">📖</span> Al-Qur'an</Link></li>
                         <li><a href="#" className="flex items-center gap-3 text-gray-400 hover:text-white px-4 py-2 rounded-lg transition-colors"><span className="text-lg">🕌</span> Jadwal Sholat</a></li>
                     </ul>
                 </div>

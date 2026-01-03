@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SplashScreen } from '../components/organisms/SplashScreen';
+import { SplashScreen } from '../components/organisms/onboarding/SplashScreen';
 import { PATHS } from '../routes/paths';
 
 interface SplashPageProps {

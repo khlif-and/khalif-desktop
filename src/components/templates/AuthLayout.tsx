@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthSidebar } from '../organisms/AuthSidebar';
+import { AuthSidebar } from '../organisms/auth/AuthSidebar';
 
 interface AuthLayoutProps {
     children: React.ReactNode;

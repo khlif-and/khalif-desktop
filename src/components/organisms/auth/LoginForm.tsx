@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from '../atoms/Button';
-import { Checkbox } from '../atoms/Checkbox';
-import { FormField } from '../molecules/FormField';
-import { SocialLoginButton } from '../molecules/SocialLoginButton';
-import { AuthSeparator } from '../molecules/AuthSeparator';
+import { Button } from '../../atoms/Button';
+import { Checkbox } from '../../atoms/Checkbox';
+import { FormField } from '../../molecules/FormField';
+import { SocialLoginButton } from '../../molecules/SocialLoginButton';
+import { AuthSeparator } from '../../molecules/AuthSeparator';
 
 interface LoginFormProps {
     onNavigateToRegister: () => void;

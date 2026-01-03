@@ -8,6 +8,7 @@ import { OnboardingPage } from '../pages/OnboardingPage';
 
 import { HomePage } from '../pages/HomePage';
 import { PlaylistPage } from '../pages/PlaylistPage';
+import { AlquranPage } from '../pages/AlquranPage';
 
 export const AppRoutes: React.FC = () => {
     return (
@@ -18,6 +19,7 @@ export const AppRoutes: React.FC = () => {
             <Route path={PATHS.LOGIN} element={<LoginPage />} />
             <Route path={PATHS.REGISTER} element={<RegisterPage />} />
             <Route path={PATHS.HOME} element={<HomePage />} />
+            <Route path="/alquran" element={<AlquranPage />} />
             <Route path={PATHS.PLAYLIST} element={<PlaylistPage />} />
             <Route path="*" element={<Navigate to={PATHS.SPLASH} replace />} />
         </Routes>
