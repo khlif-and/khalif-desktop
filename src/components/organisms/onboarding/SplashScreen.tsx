@@ -1,5 +1,5 @@
 import React from 'react';
-import abstractBg from '../../assets/abstract-bg.png';
+import abstractBg from '../../../assets/abstract-bg.png';
 
 interface SplashScreenProps {
     onStart: () => void;

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import redRippleBg from '../../assets/red-ripple-bg.png';
+import redRippleBg from '../../../assets/red-ripple-bg.png';
 
 interface OnboardingScreenProps {
     onLogin: () => void;

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { COLORS } from '../../constants/colors';
+import { COLORS } from '../../../constants/colors';
 
 interface HomeHeaderProps {
     onMenuClick: () => void;
@@ -10,10 +10,10 @@ export const HomeHeader = forwardRef<HTMLElement, HomeHeaderProps>(({ onMenuClic
     return (
         <header
             ref={ref}
-            className="h-20 flex items-center justify-between px-4 lg:px-8 z-30 gap-4 absolute top-0 left-0 w-full transition-all duration-300 border-b border-transparent"
+            className="h-20 flex items-center justify-between px-4 lg:px-8 z-30 gap-4 transition-all duration-300 border-b border-transparent shrink-0"
             style={{
-                backgroundColor: 'transparent',
-                borderColor: 'transparent'
+                backgroundColor: COLORS.background.primary,
+                borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
             }}
         >
             {/* Hamburger Button & Search */}

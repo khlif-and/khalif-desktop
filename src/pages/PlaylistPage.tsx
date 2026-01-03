@@ -1,7 +1,7 @@
 import React from 'react';
 import { DashboardLayout } from '../components/templates/DashboardLayout';
-import { PlaylistHero } from '../components/organisms/PlaylistHero';
-import { PlaylistTrackList } from '../components/organisms/PlaylistTrackList';
+import { PlaylistHero } from '../components/organisms/playlist/PlaylistHero';
+import { PlaylistTrackList } from '../components/organisms/playlist/PlaylistTrackList';
 
 export const PlaylistPage: React.FC = () => {
     return (

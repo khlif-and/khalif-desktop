@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthLayout } from '../components/templates/AuthLayout';
-import { RegisterForm } from '../components/organisms/RegisterForm';
+import { RegisterForm } from '../components/organisms/auth/RegisterForm';
 import { PATHS } from '../routes/paths';
 
 export const RegisterPage: React.FC = () => {

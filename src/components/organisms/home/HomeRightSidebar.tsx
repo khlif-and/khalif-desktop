@@ -1,5 +1,5 @@
-import { COLORS } from '../../constants/colors';
-import { MediaList, MediaItem } from '../molecules/MediaList';
+import { COLORS } from '../../../constants/colors';
+import { MediaList, MediaItem } from '../../molecules/MediaList';
 
 export const HomeRightSidebar: React.FC = () => {
     const popularUstadz: MediaItem[] = [

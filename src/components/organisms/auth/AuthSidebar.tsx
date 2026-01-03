@@ -1,6 +1,6 @@
 
 import React from 'react';
-import desertDuneBg from '../../assets/desert-dune-bg.png';
+import desertDuneBg from '../../../assets/desert-dune-bg.png';
 
 interface AuthSidebarProps {
     onBack?: () => void;

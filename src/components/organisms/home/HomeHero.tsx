@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PATHS } from '../../routes/paths';
+import { PATHS } from '../../../routes/paths';
 
 export const HomeHero: React.FC = () => {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthLayout } from '../components/templates/AuthLayout';
-import { LoginForm } from '../components/organisms/LoginForm';
+import { LoginForm } from '../components/organisms/auth/LoginForm';
 import { PATHS } from '../routes/paths';
 
 export const LoginPage: React.FC = () => {
